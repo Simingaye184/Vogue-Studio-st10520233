@@ -4,49 +4,142 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Vogue Studio | Home</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { 
+      font-family: 'Poppins', Arial, sans-serif; 
+      color: #e0e0e0; 
+      background: linear-gradient(180deg, #0d0d0d 0%, #1a1a1a 100%); 
+      line-height: 1.7; 
+    }
+    
+    /* NAV - Glass Dark Grey */
+    nav { 
+      background: rgba(20, 20, 20, 0.8); 
+      backdrop-filter: blur(10px);
+      color: #fff; 
+      padding: 1.2rem 5%; 
+      display: flex; 
+      justify-content: space-between; 
+      align-items: center; 
+      position: sticky; 
+      top: 0; 
+      z-index: 1000;
+      border-bottom: 1px solid rgba(212, 175, 55, 0.2);
+    }
+    nav h2 { font-size: 1.6rem; letter-spacing: 3px; color: #d4af37; text-shadow: 0 0 8px rgba(212,175,55,0.4); }
+    nav a { color: #bdbdbd; text-decoration: none; margin-left: 20px; font-weight: 500; transition: 0.3s; }
+    nav a:hover, nav a.active { color: #d4af37; text-shadow: 0 0 5px rgba(212,175,55,0.5); }
+
+    /* HERO - Futuristic with overlay */
+    .hero { 
+      background: linear-gradient(rgba(13,13,13,0.7), rgba(26,26,26,0.8)), url('vs.jpeg') center/cover; 
+      color: #fff; 
+      text-align: center; 
+      padding: 160px 20px;
+      border-bottom: 1px solid rgba(212,175,55,0.2);
+    }
+    .hero h1 { font-size: 3rem; margin-bottom: 15px; letter-spacing: 2px; }
+    .hero p { font-size: 1.2rem; margin-bottom: 25px; color: #bdbdbd; }
+    
+    /* BUTTON - Gold Glow */
+    .btn { 
+      background: #d4af37; 
+      color: #0d0d0d; 
+      padding: 14px 32px; 
+      text-decoration: none; 
+      border-radius: 50px; 
+      font-weight: bold; 
+      display: inline-block; 
+      transition: 0.3s;
+      box-shadow: 0 0 15px rgba(212,175,55,0.4);
+    }
+    .btn:hover { 
+      background: #fff; 
+      box-shadow: 0 0 25px rgba(255,255,255,0.4);
+    }
+
+    /* CONTENT */
+    .container { max-width: 1100px; margin: auto; padding: 80px 5%; text-align: center; }
+    .container h2 { font-size: 2.2rem; color: #fff; margin-bottom: 15px; }
+    .container h2 span { color: #d4af37; }
+    .container p { color: #a0a0a0; max-width: 700px; margin: auto; }
+
+    /* FEATURES - Glass Cards */
+    .features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 30px; margin-top: 50px; }
+    .feature { 
+      background: rgba(30, 30, 30, 0.6); 
+      backdrop-filter: blur(12px);
+      padding: 35px 25px; 
+      border-radius: 16px; 
+      border: 1px solid rgba(212,175,55,0.15);
+      box-shadow: 0 8px 25px rgba(0,0,0,0.4); 
+      transition: all 0.4s ease;
+    }
+    .feature:hover { 
+      transform: translateY(-8px); 
+      border-color: #d4af37;
+      box-shadow: 0 0 25px rgba(212,175,55,0.3);
+    }
+    .feature h3 { color: #d4af37; margin-bottom: 10px; font-size: 1.3rem; }
+
+    /* FOOTER */
+    footer { 
+      background: #0d0d0d; 
+      color: #777; 
+      text-align: center; 
+      padding: 30px; 
+      margin-top: 60px; 
+      border-top: 1px solid rgba(212,175,55,0.1);
+    }
+
+    @media(max-width: 900px){
+      .features { grid-template-columns: 1fr; }
+      .hero h1 { font-size: 2.2rem; }
+    }
+  </style>
 </head>
 <body>
 
-  <h1>VOGUE STUDIO</h1>
+  <nav>
+    <h2>VOGUE STUDIO</h2>
+    <div>
+      <a href="index.html" class="active">Home</a>
+      <a href="about.html">About</a>
+      <a href="services.html">Services</a>
+      <a href="contact.html">Contact</a>
+    </div>
+  </nav>
 
-  <!-- NAV -->
-  <a href="index.html">Home</a> | 
-  <a href="about.html">About</a> | 
-  <a href="services.html">Services</a> | 
-  <a href="contact.html">Contact</a>
+  <section class="hero">
+    <h1>Tailor-Made For Every Mbokodo</h1>
+    <p>Custom fits. Quality fabric. Confidence in every stitch.</p>
+    <a href="contact.html" class="btn">Book Your Fitting</a>
+  </section>
 
-  <hr>
+  <div class="container">
+    <h2>Welcome to <span>Vogue Studio</span></h2>
+    <p>We design dresses that celebrate your strength and style. From casual to couture, every piece is made just for you in Durban.</p>
+    
+    <div class="features">
+      <div class="feature">
+        <h3>Custom Tailoring</h3>
+        <p>Perfect fit guaranteed. Measured and made just for you.</p>
+      </div>
+      <div class="feature">
+        <h3>African Elegance</h3>
+        <p>Modern designs with cultural roots and luxury fabrics.</p>
+      </div>
+      <div class="feature">
+        <h3>Fast Turnaround</h3>
+        <p>From fitting to final dress, we deliver on time.</p>
+      </div>
+    </div>
+  </div>
 
-  <!-- HERO -->
-  <h2>Tailor-Made For Every Mbokodo</h2>
-  <p>Custom fits. Quality fabric. Confidence in every stitch.</p>
-  
-  <!-- YOUR IMAGE -->
-  <img src="c:\Users\Student\Downloads\vs.jpeg" alt="Vogue Studio Dress" width="400">
-  <br><br>
-  
-  <a href="contact.html">Book Your Fitting</a>
-
-  <hr>
-
-  <!-- CONTENT -->
-  <h2>Welcome to Vogue Studio</h2>
-  <p>We design dresses that celebrate your strength and style. From casual to couture, every piece is made just for you in Durban.</p>
-
-  <!-- FEATURES -->
-  <h3>Custom Tailoring</h3>
-  <p>Perfect fit guaranteed. Measured and made just for you.</p>
-
-  <h3>African Elegance</h3>
-  <p>Modern designs with cultural roots and luxury fabrics.</p>
-
-  <h3>Fast Turnaround</h3>
-  <p>From fitting to final dress, we deliver on time.</p>
-
-  <hr>
-
-  <!-- FOOTER -->
-  <p>© 2026 Vogue Studio | We dress Mbokodos</p>
+  <footer>
+    <p>© 2026 Vogue Studio | We dress Mbokodos 💜</p>
+  </footer>
 
 </body>
 </html>
